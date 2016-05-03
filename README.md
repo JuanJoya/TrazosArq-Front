@@ -2,7 +2,7 @@
 
 <a href="http://www.trazosarq.com/"><img
   src="/static/img/logo2.png" alt="Trazos Arq Logo"
-  width="208" height="59" align="center"></a>
+  width="208" height="69" align="center"></a>
 
 > Trazos Arquitectonicos - Mobiliario y Servicios.
 
