@@ -1,0 +1,950 @@
+@import "normalize"
+@import "iconfont"
+
+body
+    background #ffffff
+    min-height 100vh
+    display flex
+    flex-direction column
+    overflow-x hidden
+
+.Header
+    text-align left
+    height 100px
+    background url(../img/header.png)
+    background-repeat no-repeat
+    background-position right
+    background-color #d3d3d3
+        
+    &-main
+        width 100%
+        height 100px
+        display flex
+        justify-content space-between
+
+    &-left
+        padding-top 5px
+        margin-left 18%
+        
+    &-img
+        display inline-block
+        width 205px
+        vertical-align middle
+
+    &-title
+        font-family 'Roboto', sans-serif
+        vertical-align middle
+        display inline-block
+        font-weight 300
+        font-size 1.2rem
+        padding 0 .5rem
+        margin-top 3.5rem
+        color #000000
+
+    &-titleMobile
+        display none
+
+    &-right
+        display flex
+        margin-right 1rem
+
+    &-rightPhone
+        display flex
+        flex-direction column
+        justify-content center
+        align-items center
+        h2
+            margin 0
+            padding 0
+            color #1fc8db
+            font-family 'Oswald', sans-serif
+            font-style italic
+            font-size 1.3rem
+            font-weight 400
+            line-height 1.3rem
+        h3
+            margin 0
+            padding .3rem 1rem
+            font-style italic
+            font-family 'Oswald', sans-serif
+            font-size 1.3rem
+            font-weight 400
+            color #818181
+            line-height 1.3rem
+        span
+            color #1fc8db
+            padding-right .5rem
+
+    &-rightSocial
+        display flex
+        flex-direction column
+        justify-content space-around
+        align-items center
+        a
+            transition color .2s
+            text-decoration none
+            color gray
+            outline 0
+            &:nth-child(1):hover
+                color #2cc917
+            &:nth-child(2):hover
+                color #618acb
+            &:nth-child(3):hover
+                color #1fc8db
+        span
+            font-size 1.2rem
+            line-height 1.5rem
+            padding 0 .5rem
+
+.MainMenu
+    transition all .2s
+
+    &--sticky
+        z-index 20
+        position fixed
+        width 100%
+        top 0
+        opacity 0.9
+
+    &-list
+        display flex
+        padding 0
+        margin 0
+        background #5c5c5c
+        list-style none
+
+    &-item
+        flex auto
+        text-align center
+        border-right 1px solid #6d6d6d
+        &:last-child
+            border-right none
+
+    &-link
+        transition all .2s
+        display block
+        line-height 40px
+        color #ebebeb
+        text-decoration none
+        font-weight 300
+        outline 0
+        border-bottom 3px solid #989898
+        span
+            padding-right 10px
+            color #cbcbcb
+            transition color .2s
+        &:hover > span
+            color #3be6e6
+
+.MainMenu-link:hover, .MainMenu-selected
+    color white
+    background #6f6f6f
+    border-bottom 3px solid #3be6e6
+
+.MainContent
+    flex 1
+    background #343434
+    background url(../img/pattern/back.png)
+
+.MainSlider
+    position relative
+    overflow hidden
+    &:hover > .MainSlider-legend
+        top 0
+
+    &-legend
+        font-size 2.5rem
+        font-family 'Oswald', sans-serif
+        font-weight 500
+        z-index 10
+        transition top .8s
+        margin 0
+        padding 0
+        box-sizing border-box
+        width 100%
+        height 100%
+        text-align center
+        background rgba(0,0,0,.2)
+        color white
+        text-shadow 0px 4px 3px rgba(0,0,0,0.4),
+                     0px 8px 13px rgba(0,0,0,0.1),
+                     0px 18px 23px rgba(0,0,0,0.1)
+        display flex
+        justify-content center
+        align-items center
+        position absolute
+        top 100%
+        span
+            color #00ffe2
+            margin-left 1rem
+
+.about-section, .proposal-section
+    display flex
+    justify-content center
+    align-items center
+
+.about-article, .proposal-article
+    margin 4rem 0
+    width 80%
+
+.about-article h3, .proposal-article h3
+    margin 0
+    text-align center
+    font-size 2.5rem
+    line-height 1.6
+    font-family 'Oswald', sans-serif
+    font-weight 500
+    color #1fc8db
+
+.about-article p, .proposal-article p
+    margin 0
+    padding .5rem 0
+    font-family 'Roboto', sans-serif
+    text-align center
+    font-weight 300
+    font-size 1.3rem
+    color #d3d3d3
+
+.services-section
+    font-size 0
+    width 100%
+    background black
+    display flex
+    flex-wrap wrap
+    justify-content center
+
+.services-article
+    width 25%
+    position relative
+    transition opacity .3s
+    a
+        text-decoration none
+        outline 0
+    &:hover
+        opacity .8
+    img
+        width 100%
+        display block
+    figcaption
+        font-size 1rem
+        color #ffffff
+        font-weight 600
+        text-shadow 1px 1px 1px black
+        position absolute
+        text-align center
+        left 0
+        right 0
+        bottom 10%
+        padding .5rem 0
+        background rgba(0, 0, 0, 0.2)
+
+.elements-section
+    display flex
+    justify-content center
+    flex-wrap wrap
+
+.elements-article
+    margin 6rem 2rem
+    width 200px
+    display flex
+    justify-content center
+    img
+        width 190px
+        height 120px
+        box-shadow 0 0 0 3px #1fc8db,
+                0 20px 20px -12px #000
+    figcaption
+        margin-top 1rem
+        text-align center
+        font-family 'Roboto', sans-serif
+        font-size 1.1rem
+        font-weight 400
+        color #ffffff
+
+.proposal-section
+    background #ffffff
+
+.proposal-article
+    p
+        color #5d5d5d
+        font-weight 400
+        font-size 1.2rem
+
+.PageHeader
+    background url(../img/main-slider/55.jpg)
+    height 220px
+    background-position top
+    background-size cover
+
+    &-title
+        margin 0
+        box-sizing border-box
+        width 100%
+        height 100%
+        background rgba(0,0,0,.5)
+        display flex
+        justify-content center
+        align-items center
+        position relative
+        span
+            color #ffffff
+            font-family 'Oswald', sans-serif
+            font-size 3rem
+            font-weight 300
+            text-shadow 0px 4px 3px rgba(0,0,0,0.4),
+                     0px 8px 13px rgba(0,0,0,0.1),
+                     0px 18px 23px rgba(0,0,0,0.1)
+            border-bottom 1px solid aqua
+
+.serviceDetail-section, .gallery-section
+    width 1140px
+    margin 0 auto
+
+.serviceDetail-article
+    font-size 0
+    margin 4rem 0
+    background #434343
+    h2
+        a
+            text-decoration none
+            outline 0
+        span
+            color #434343
+            position absolute
+            font-size 1.2rem
+            padding 8px 8px 0 8px
+            right 0
+            top 0
+            bottom 0
+            text-shadow none
+            transition color .3s
+            background rgba(0, 0, 0, 0.13)
+            &:hover
+                color #ffffff
+        &:after
+            position absolute
+            top 100%
+            right 23%
+            content ""
+            width 0
+            height 0
+            border-left 12px solid transparent
+            border-right 12px solid transparent
+            border-top 8px solid transparent
+
+    &:nth-child(1)
+        h2:after
+            border-top-color #1fc8db
+        h3
+            color #1fc8db
+    &:nth-child(2)
+        h2:after
+            border-top-color #1fdba8
+        h3
+            color #1fdba8
+    &:nth-child(3)
+        h2:after
+                border-top-color #ff7979
+        h3
+            color #ff7979
+    &:nth-child(4)
+        h2:after
+                border-top-color #727272
+        h3
+            color #e8e8e8
+            text-shadow 1px 1px 4px #000000
+    &:hover .serviceDetail-image
+        img
+            width 700px
+            height 500px
+
+.serviceDetail-article h2, .gallery-article h2
+    position relative
+    font-size 1.1rem
+    font-family "Roboto", sans-serif
+    font-weight 500
+    text-shadow -1px 1px 1px #747474
+    color white
+    margin 0
+    text-align center
+    line-height 1.9
+
+.serviceDetail-article:nth-child(1) h2, .gallery-article:nth-child(1) h2
+    background #1fc8db
+
+.serviceDetail-article:nth-child(2) h2, .gallery-article:nth-child(2) h2
+    background #1fdba8
+
+.serviceDetail-article:nth-child(3) h2, .gallery-article:nth-child(3) h2
+    background #ff7979
+
+.serviceDetail-article:nth-child(4) h2, .gallery-article:nth-child(4) h2
+    background #727272
+
+.serviceDetail-image
+    box-sizing border-box
+    margin 0
+    padding 0
+    display inline-block
+    width 600px
+    height 400px
+    vertical-align top
+    overflow hidden
+    img
+        width 600px
+        height 400px
+        transition all .9s
+
+.serviceDetail-description
+    vertical-align top
+    box-sizing border-box
+    width 540px
+    height 400px
+    display inline-block
+    h3
+        font-size 1.1rem
+        font-family "Roboto", sans-serif
+        font-weight 500
+        text-align center
+        margin 2rem  0 .5rem 0
+    p
+        margin 0
+        font-size 1rem
+        color #dbdbdb
+        font-weight 400
+        text-align justify
+        padding 1rem
+
+.gallery-article
+    background #434343
+    margin 4rem 0
+
+.gallery-articleBody
+    padding 1rem
+    font-size 0
+
+.gallery-item
+    display inline-block
+    border-radius 5px
+    overflow hidden
+    margin 4px
+    a
+        text-decoration none
+        outline 0
+    img
+        display block
+        height 180px
+
+.fullmap
+    margin 0
+    padding 0
+    width 100%
+    height 400px
+    box-sizing border-box
+    overflow hidden
+
+#gmap_canvas
+    height 400px
+    width 100%
+    img
+        max-width none!important
+        background none!important
+
+.Contact-section
+    width 1140px
+    margin 0 auto
+    padding 2.5rem 0
+    box-sizing border-box
+    font-size 0
+    *
+        box-sizing border-box
+
+.Contact-article
+    padding 0 1rem
+    display inline-block
+    vertical-align top
+    &:nth-child(1)
+        width 740px
+    &:nth-child(2)
+        width 400px
+    & > *
+        font-size 1rem
+    h2
+        text-align center
+        font-size 1.4rem
+        font-family "Oswald", sans-serif
+        font-weight 400
+        line-height 2
+        color #1fc8db
+        margin 0
+        padding 0
+        border-bottom 1px solid #1fc8db
+    p
+        text-align justify
+        color #d8d8d8
+        font-family "Roboto", sans-serif
+        font-size 1rem
+        font-weight 300
+
+.Contact-item
+    text-align center
+    ul
+        padding 0
+        margin-top 1rem
+        list-style none
+    img
+        margin-bottom .5rem
+        width 40%
+        opacity .4
+
+.Contact-social
+    text-align center
+    li
+        display inline-block
+        margin 0 .2rem .5rem .2rem
+        a
+            text-decoration none
+            outline 0
+            display block
+            span
+                transition color .5s
+                color #d3d3d3
+                font-size 2rem
+        &:nth-child(1)
+            a span:hover
+                color #ff7d7d
+        &:nth-child(2)
+            a span:hover
+                color #3190ff
+        &:nth-child(3)
+            a span:hover
+                color #00dbdb
+
+.Contact-data
+    text-align left
+    li
+        color #ffffff
+        font-size 1.1rem
+        font-family "Roboto", sans-serif
+        font-weight 300
+        line-height 2.6
+        margin-left 2rem
+        span
+            font-size 1.2rem
+            color #434343
+            margin-right 1rem
+            border-radius 50%
+            padding .5rem
+            background #1fc8db
+
+.formContact
+    text-align center
+    padding .5rem 0
+    margin 0
+    textarea
+        color #ffffff
+        background #868686
+        border-radius 5px
+        border none
+        padding 10px
+        width 76%
+        height 90px
+        display block
+        margin auto
+        resize vertical
+    button
+        display block
+        margin auto
+        margin-top 1rem
+        width 76%
+        border none
+        border-radius 5px
+        padding 1rem
+        background #1fc8db
+        color white
+        font-family "Oswald", sans-serif
+        font-size 1.3rem
+        line-height 1
+        font-weight 400
+        transition all .3s
+        &:hover
+            box-shadow 0 56px rgb(0, 177, 255) inset
+
+    &-item
+        font-size 0
+        margin 1rem 0
+        span
+            color #1fc8db
+            border-top-left-radius 5px
+            border-bottom-left-radius 5px
+            border-top 1px solid #434343
+            border-bottom 1px solid #434343
+            border-left 1px solid #434343
+            vertical-align middle
+            font-size 1rem
+            background #646464
+            padding 13px
+        input
+            border-top-right-radius 5px
+            border-bottom-right-radius 5px
+            border none
+            background #868686
+            color #ffffff
+            vertical-align middle
+            font-size 1rem
+            box-sizing border-box
+            padding 10px 10px
+            width 70%
+
+::-webkit-input-placeholder
+    color #d8d8d8
+
+:-moz-placeholder
+    color #d8d8d8
+
+::-moz-placeholder
+    color #d8d8d8
+
+:-ms-input-placeholder
+    color #d8d8d8
+
+.MainFooter
+    width 100%
+    text-align center
+    background #363535
+    background url(../img/pattern/p2.png)
+
+    &-body
+        margin 1rem 0
+        display flex
+        justify-content center
+        flex-wrap wrap
+
+    &-item
+        margin 0 1rem
+        width 350px
+        height auto
+        h3
+            color #1fc8db
+            font-weight 500
+            border-bottom 1px solid #1fc8db
+        h4
+            font-weight 400
+        h5
+            font-weight 300
+        .Footer-logo
+            width 45%
+            opacity .5
+
+        h3, h4, h5
+            margin 0
+            font-family "Roboto", sans-serif
+            line-height 1.5
+            color #eaeaea
+
+    &-map
+        margin-top .5rem
+        display inline-block
+        border-radius 10px
+        border 2px solid #1fc8db
+
+    &-contact
+        margin 0
+        padding 1rem 2rem
+        list-style none
+        text-align left
+        li
+            color #00e5ff
+            padding .3rem 1rem
+            font-family "Roboto", sans-serif
+            font-weight 500
+            &:nth-child(even)
+                color #ffffff
+                padding-left 2.5rem
+                font-weight 300
+            span
+                padding-right .5rem
+                color #1fc8db
+
+    &-social
+        padding 1.5rem 0 1rem 0
+        margin 0
+        list-style none
+        li
+            display inline-block
+            a
+                transition color .3s
+                text-decoration none
+                color #c3c3c3
+                font-size 1.5rem
+                padding 0 .5rem
+                outline 0
+                &:hover
+                    color aqua
+
+    &-copyright
+        font-size .9rem
+        background black
+        margin 0
+        font-weight lighter
+        color gray
+        a
+            color rgb(102, 175, 151)
+            font-family "Oswald", sans-serif
+            text-decoration none
+            outline 0
+            &:hover
+                color aqua
+
+#toggle-menu
+    display none
+
+.u-colors
+    display flex
+    width 100%
+    height 5px
+    background white
+
+.color-item
+    flex auto
+    &:nth-child(1)
+        background #1f99db
+    &:nth-child(2)
+        background #1fc8db
+    &:nth-child(3)
+        background #1fdb90
+    &:nth-child(4)
+        background #5ee8bc
+    &:nth-child(5)
+        background #b8e85e
+
+@media screen and (max-width:1366px)
+    .elements-article
+        margin 5rem 1rem
+    .fullmap
+        height 300px
+    #gmap_canvas
+        height 300px
+    .PageHeader
+        height 180px
+        &-title span
+            font-size 2.8rem
+
+@media screen and (max-width:1175px)
+    .elements-article
+        margin 3rem .5rem
+    .MainFooter-item:nth-child(1)
+        height 220px
+    .MainFooter-item:nth-child(3)
+        height 165px
+    .PageHeader
+        height 160px
+        &-title span
+            font-size 2.5rem
+    .serviceDetail-section, .gallery-section
+        width 900px
+    .serviceDetail-article, .gallery-article
+        margin 3rem 0
+    .serviceDetail-image, .serviceDetail-image img
+        width 460px
+        height 360px
+    .serviceDetail-article:hover .serviceDetail-image img
+        width 510px
+        height 410px
+    .serviceDetail-description
+        width 440px
+        height 360px
+        
+@media screen and (max-width:1162px)
+    .elements-article
+        margin 2rem .5rem;
+    .MainFooter-item
+        margin 1rem
+        width 300px
+        height 270px
+    .Contact-section
+        width 930px
+    .Contact-article:nth-child(1)
+        width 600px
+    .Contact-article:nth-child(2)
+        width 330px
+
+@media screen and (max-width:930px)
+    .elements-article
+        margin 1rem .5rem
+    .serviceDetail-section, .gallery-section
+        width 100%
+    .serviceDetail-image
+        display block
+        width 100%
+        height auto
+        & img
+            display block
+            width 100%
+            height auto
+    .serviceDetail-article:hover .serviceDetail-image img
+        width 100%
+        height inherit
+    .serviceDetail-description
+        display block
+        width 100%
+        height auto
+    .serviceDetail-article h2:after
+        display none
+    .gallery-articleBody
+        text-align center
+    .fullmap
+        height 250px
+    #gmap_canvas
+        height 250px
+    .Contact-section
+        width 800px
+    .Contact-article:nth-child(1)
+        width 500px
+    .Contact-article:nth-child(2)
+        width 300px
+    .formContact textarea, .formContact button
+        width 79%
+
+@media screen and (max-width:800px) 
+    .Header-left
+        margin-left 3%
+    .MainSlider-legend
+        font-size 1.8rem
+    .services-section
+        background white
+    .services-article
+        width 250px
+        margin 1rem
+        box-shadow 0 0 0 3px #1fc8db,
+                    0 20px 20px -12px #000
+    .about-article, .proposal-article
+        margin 1.5rem 0
+    .about-article h3, .proposal-article h3
+        font-size 2rem
+        line-height 1.4
+    .about-article p, .proposal-article p
+        font-size 1.1rem
+    .proposal-article p
+        color #464646
+        font-weight 300
+        font-size 1.1rem
+    .Contact-section
+        width 100%
+    .Contact-article:nth-child(1)
+        width 90%
+        display block
+        margin auto
+    .Contact-article:nth-child(2)
+        width 300px
+        display block
+        padding-top 2rem
+        margin auto
+    .formContact textarea, .formContact button
+        width 76%
+        
+@media screen and (max-width:768px)
+    .MainMenu
+        &-list
+            display none
+        &-item
+            text-align inherit
+            border-bottom none
+            &:last-child
+                border none
+        &-link
+            padding-left 1rem
+        
+    #toggle-menu
+        display block
+        background #5c5c5c
+        color #e5e5e5
+        padding-left 1rem
+        font-size 1.2rem
+        font-family 'Oswald', sans-serif
+        line-height 2
+        font-weight 300
+        cursor pointer
+        & span
+            margin-right .5rem
+            color #1fc8db
+            font-size 1.3rem
+
+@media screen and (max-width:668px) 
+    .Header
+        height auto
+        background #393939
+        &-main
+            height auto
+        &-img
+            display none
+        &-title
+            display none
+        &-left
+            padding-top 0px
+        &-titleMobile
+            display block
+            margin 0
+            padding 0
+            font-family 'Oswald', sans-serif
+            font-weight 700
+            font-size 1.3rem
+            color #1fc8db
+            text-shadow -1px 1px 2px #505050
+        &-left
+            display flex
+            align-items center
+        &-right
+            margin .5rem 0
+            &Phone h2
+                font-size 1rem
+                line-height 1rem
+            &Phone h3
+                font-size 1rem
+                line-height 1rem
+            &Social
+                flex-direction row
+        
+    .MainMenu-list
+        z-index 30
+        position absolute
+        width 100%
+    .MainSlider-legend
+        display none
+    .PageHeader
+        height 100px
+        &-title span
+            font-size 1.8rem
+            
+    .serviceDetail-description p
+        text-align center
+    .gallery-item img
+        height 120px
+    .fullmap
+        height 200px
+    #gmap_canvas
+        height 200px
+    .Contact-article:nth-child(1)
+        width 100%
+    .Contact-article:nth-child(2)
+        width 100%
+        display block
+        padding-top 1.5rem
+    .Contact-item img
+        width 120px
+    .formContact-item span
+        display none
+    .formContact-item input
+        border-radius 5px
+        width 100%
+    .formContact textarea, .formContact button
+        width 100%
+ 
+@media screen and (max-width:468px) 
+    .Header-rightSocial
+        display none
+    .MainSlider
+        display none
+
+@import "rslide"
+@import "lightbox"
